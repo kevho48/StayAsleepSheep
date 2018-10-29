@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="191042043355431">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="875510333847541" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="ScrollTo" id="1" name="Set enabled" sid="463355462807526" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="755746484989534" type="ShadowLight">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="909146535292916">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="676939245540668" type="Enemy">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="LineOfSight" id="2" name="Add obstacle" sid="887656694755309" type="Enemy">
+                    <param id="0" name="Obstacle">Obstacles</param>
+                </action>
+                <action behavior="LineOfSight" id="2" name="Add obstacle" sid="316083273286025" type="Enemy">
+                    <param id="0" name="Obstacle">playerwall</param>
+                </action>
+                <action id="-21" name="Rotate toward position" sid="326316003941109" type="Enemy">
+                    <param id="0" name="Degrees">90</param>
+                    <param id="1" name="X">Player.X</param>
+                    <param id="2" name="Y">Player.Y</param>
+                </action>
+                <action id="-17" name="Move forward" sid="896631139071391" type="Enemy">
+                    <param id="0" name="Distance">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="886953164649492">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="464890563587213" type="Enemy">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="389023222864546" type="Player">
+                    <param id="0" name="X">Jail.X</param>
+                    <param id="1" name="Y">Jail.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="395464836656325">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="903125565616361" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="486401009881964" type="Player">
+                    <param id="0" name="Object">playerwall</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="591483434930253">
+            <conditions>
+                <condition id="0" name="On clicked" sid="672074512885338" type="Start" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="723578656083512" type="System">
+                    <param id="0" name="Layout">Level1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="541032398720011">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="264522843256305" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Start</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="795405557311297" type="System">
+                    <param id="0" name="Layout">Level1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="606081363836363">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="883802938079044" type="Player">
+                    <param id="0" name="Object">Goal</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="575841129713012" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

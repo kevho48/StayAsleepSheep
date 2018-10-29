@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2layout>
+    <name>Level2</name>
+    <sid>706902319107779</sid>
+    <event-sheet>Event sheet 1</event-sheet>
+    <size>
+        <width>1280</width>
+        <height>960</height>
+    </size>
+    <margins>
+        <horizontal>0</horizontal>
+        <vertical>0</vertical>
+    </margins>
+    <unbounded-scrolling>0</unbounded-scrolling>
+    <layers>
+        <layer name="Game" sid="452711626475380">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>0</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="playerwall" uid="18">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>837</x>
+                        <y>-89</y>
+                        <z>0</z>
+                        <width>10</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Light" sid="184215143230665">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="ShadowLight" uid="1">
+                    <properties>
+                        <light-height>1</light-height>
+                        <light-radius>0</light-radius>
+                        <cast-from>All</cast-from>
+                        <tag></tag>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-145</x>
+                        <y>232</y>
+                        <z>0</z>
+                        <width>50</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Layer 0" sid="577483789026490">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Player" uid="19">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>1000</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>90-degree intervals</set-angle>
+                                <default-controls>Yes</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>10000</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>31</x>
+                        <y>97</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.46875</hotspotX>
+                        <hotspotY>0.59375</hotspotY>
+                        <angle>0.000014532</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Enemy" uid="20">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Visible>0</Visible>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>500</range>
+                                <cone-of-view>90</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pathfinding">
+                            <properties>
+                                <cell-size>30</cell-size>
+                                <cell-border>-1</cell-border>
+                                <obstacles>Solids</obstacles>
+                                <max-speed>200</max-speed>
+                                <acceleration>1000</acceleration>
+                                <deceleration>2000</deceleration>
+                                <rotate-speed>135</rotate-speed>
+                                <rotate-object>Yes</rotate-object>
+                                <diagonals>Enabled</diagonals>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-186</x>
+                        <y>375</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0.012306374</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Obstacles" uid="21">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <tile-width>32</tile-width>
+                        <tile-height>32</tile-height>
+                        <tile-x-offset>0</tile-x-offset>
+                        <tile-y-offset>0</tile-y-offset>
+                        <tile-x-spacing>0</tile-x-spacing>
+                        <tile-y-spacing>0</tile-y-spacing>
+                        <seamless-mode>On</seamless-mode>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>1280</width>
+                        <height>960</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                    <tilemap-data>
+                        <width>40</width>
+                        <height>30</height>
+                        <max-width>40</max-width>
+                        <max-height>30</max-height>
+                        <data>22,22,371,403,371,403,371,403,371,403,54,54,54,54,371,403,371,403,371,403,371,403,371,403,371,403,54,54,54,86,23,23,372,404,372,404,372,404,372,404,55,54,86,86,372,404,372,404,372,404,372,404,372,404,372,404,55,55,55,87,24,24,371,403,88,56,88,56,371,403,56,55,87,87,371,403,371,371,371,403,371,403,371,403,371,403,56,56,56,88,25,25,372,404,89,57,89,57,372,404,54,56,88,88,372,404,372,372,372,404,372,404,372,404,372,404,57,57,57,89,22,371,371,403,371,403,371,403,371,403,371,403,89,89,371,403,89,56,88,56,88,54,371,403,371,403,371,403,371,403,23,372,372,404,372,404,372,404,372,404,372,404,55,55,372,404,57,57,89,57,89,55,372,404,372,404,372,404,372,404,24,371,371,403,371,403,371,403,56,56,371,403,371,403,371,403,371,403,371,403,56,56,371,403,371,403,371,403,371,403,25,372,372,404,372,404,372,404,86,54,372,404,372,404,372,404,372,404,372,404,57,57,372,404,372,404,372,404,372,404,22,371,371,403,86,55,371,403,87,55,87,54,54,55,87,55,371,403,371,403,86,54,371,256,288,256,288,371,371,403,23,372,372,404,54,56,372,404,88,56,88,86,54,56,88,56,372,404,372,404,87,55,372,257,289,257,289,372,372,404,24,371,371,371,371,371,403,371,403,403,403,371,371,371,371,371,371,371,371,403,88,56,371,256,288,256,288,403,371,403,25,372,372,372,372,372,404,372,404,404,404,372,372,372,372,372,372,372,372,404,89,54,372,257,289,257,289,404,372,404,22,371,403,371,403,371,403,403,371,403,403,372,404,372,372,404,372,372,372,404,55,55,371,403,371,403,371,403,371,403,23,372,404,372,404,372,404,404,372,404,404,371,403,288,320,288,320,371,372,404,56,56,372,404,372,404,372,404,372,404,24,372,404,371,403,288,320,288,320,371,403,372,404,289,321,288,320,372,372,404,57,57,371,403,371,403,371,403,371,403,25,371,403,372,404,289,321,289,321,372,404,372,404,289,321,289,321,371,372,404,86,86,372,404,372,404,372,404,372,404,22,372,404,371,403,288,320,320,320,371,403,371,403,288,320,288,320,371,372,404,87,87,371,403,403,403,403,403,403,403,23,371,403,372,404,289,321,321,321,372,404,372,404,289,321,289,321,372,372,404,54,86,372,404,404,404,404,404,404,404,24,372,404,371,403,371,403,371,371,403,371,403,404,403,403,371,403,371,372,404,55,87,371,403,371,403,256,288,256,288,25,371,403,372,404,372,404,372,372,404,372,404,372,404,404,372,404,372,372,404,56,88,372,404,372,404,257,289,257,289,22,372,404,371,403,371,403,403,371,403,288,320,288,320,371,403,371,403,372,404,57,89,371,403,371,371,256,288,256,288,23,372,404,371,403,372,404,404,372,404,289,321,289,321,372,404,372,404,372,404,86,54,372,404,372,372,257,289,257,289,24,371,403,371,371,403,371,403,371,403,288,320,288,320,371,403,371,403,372,404,87,55,371,403,371,403,371,371,371,403,25,372,404,371,372,404,372,404,372,404,289,321,289,321,372,404,372,404,372,404,88,56,372,404,372,404,372,372,372,404,22,371,403,371,372,404,371,403,403,403,371,403,371,403,371,403,371,403,372,404,89,57,89,55,55,371,371,371,403,87,23,372,404,372,372,404,372,404,404,404,372,404,372,404,372,404,372,404,372,404,56,56,56,56,56,372,372,372,404,88,24,371,371,371,403,371,371,403,371,403,403,403,403,403,403,403,371,403,372,404,57,57,57,57,57,371,403,371,403,89,25,372,372,371,403,372,372,404,372,404,404,404,404,404,404,404,372,404,371,403,54,54,54,86,56,372,404,372,404,89,22,371,403,372,404,372,404,403,371,403,371,403,371,403,372,404,404,404,372,404,55,55,54,54,54,54,371,403,54,86,22,372,404,371,403,404,372,404,372,404,372,404,372,404,288,320,288,320,371,403,56,56,55,55,55,55,372,404,55,87,23,371,403,372,404,403,288,320,288,320,371,403,371,403,289,321,289,321,372,404,57,57,56,56,56,56,371,403,371,403,24,372,404,371,403,404,289,321,289,321,372,404,372,404,288,320,288,320,372,404,54,54,86,54,86,54,372,404,372,404,25,371,403,372,404,403,288,320,288,320,371,403,371,403,288,320,288,320,371,403,371,403,371,403,87,55,55,55,55,55,25,372,404,371,403,404,289,321,289,321,372,404,372,404,289,321,289,321,372,404,372,404,372,404,88,56,56,56,56,56,55,371,403,372,404,403,371,403,403,371,403,403,371,403,371,403,371,403,371,403,57,57,371,403,89,57,57,57,57,57,56,372,404,372,404,404,372,404,404,372,404,404,372,404,372,404,372,404,372,404,54,86,372,404,55,55,55,55,55,87,22,22,54,371,403,56,88,56,54,54,54,54,54,54,86,54,54,86,54,54,55,87,371,403,371,403,371,403,371,403,23,23,55,372,404,57,89,57,55,55,55,55,55,55,87,55,55,87,55,55,56,88,372,404,372,404,372,404,372,404,24,24,56,371,403,403,371,403,371,403,371,403,371,403,371,403,371,403,371,403,371,403,371,403,371,403,371,403,371,403,25,25,57,372,404,404,372,404,372,404,372,404,372,404,372,404,372,404,372,404,372,404,372,404,372,404,372,404,372,404</data>
+                    </tilemap-data>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+    </layers>
+    <nonworld-instances />
+    <effects />
+</c2layout>

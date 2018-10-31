@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="PlayerWalls" sid="577611102819914" static="0" type="number">0</variable>
         <event-block sid="191042043355431">
             <conditions>
                 <condition id="-1" name="Every tick" sid="875510333847541" type="System" />
@@ -16,6 +17,94 @@
                     <param id="1" name="Y">Player.Y</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="175144388576372">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="946836837221187" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="817973106027623" type="System">
+                            <param id="0" name="Variable">PlayerWalls</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="945292003403980">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="198120118992213" type="Enemy">
+                                    <param id="0" name="Instance variable">Found</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="549426041976872" type="Enemy">
+                                    <param id="0" name="X">EnemyPath.X</param>
+                                    <param id="1" name="Y">EnemyPath.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="480306795545143">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="977845399617110" type="Enemy" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="519876924567309" type="Enemy" />
+            </actions>
+        </event-block>
+        <event-block sid="964490326970093">
+            <conditions>
+                <condition behavior="Pathfinding" id="5" name="On arrived" sid="289891041744230" type="Enemy" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="484307228932254">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="421262536043537" type="Enemy">
+                            <param id="0" name="Object">EnemyPath</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="567978524397596" type="Enemy">
+                            <param id="0" name="Instance variable">StepNum</param>
+                            <param id="1" name="Value">EnemyPath.Variable1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="970120948927268">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="476026987506049" type="Enemy">
+                            <param id="0" name="Instance variable">StepNum</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="280152436321170" type="Enemy">
+                            <param id="0" name="Instance variable">StepNum</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="733235165771611">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="856506153843542" type="System">
+                            <param id="0" name="Object">EnemyPath</param>
+                            <param id="1" name="Expression">EnemyPath.Variable1</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Enemy.StepNum + 1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="325580978741049" type="Enemy">
+                            <param id="0" name="X">EnemyPath.X</param>
+                            <param id="1" name="Y">EnemyPath.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="909146535292916">
             <conditions>
@@ -28,15 +117,18 @@
                     <param id="0" name="Obstacle">Obstacles</param>
                 </action>
                 <action behavior="LineOfSight" id="2" name="Add obstacle" sid="316083273286025" type="Enemy">
-                    <param id="0" name="Obstacle">playerwall</param>
+                    <param id="0" name="Obstacle">VerticalWall</param>
                 </action>
-                <action id="-21" name="Rotate toward position" sid="326316003941109" type="Enemy">
+                <action behavior="LineOfSight" id="2" name="Add obstacle" sid="682397468240465" type="Enemy">
+                    <param id="0" name="Obstacle">HorizontalWall</param>
+                </action>
+                <action id="-21" name="Rotate toward position" sid="614825590216270" type="Enemy">
                     <param id="0" name="Degrees">90</param>
                     <param id="1" name="X">Player.X</param>
                     <param id="2" name="Y">Player.Y</param>
                 </action>
-                <action id="-17" name="Move forward" sid="896631139071391" type="Enemy">
-                    <param id="0" name="Distance">2</param>
+                <action id="-17" name="Move forward" sid="449324714936038" type="Enemy">
+                    <param id="0" name="Distance">2.5</param>
                 </action>
             </actions>
         </event-block>
@@ -53,40 +145,12 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="395464836656325">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="903125565616361" type="Keyboard">
-                    <param id="0" name="Key">32</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="486401009881964" type="Player">
-                    <param id="0" name="Object">playerwall</param>
-                    <param id="1" name="Layer">2</param>
-                    <param id="2" name="Image point">1</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="591483434930253">
             <conditions>
                 <condition id="0" name="On clicked" sid="672074512885338" type="Start" />
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="723578656083512" type="System">
-                    <param id="0" name="Layout">Level1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="541032398720011">
-            <conditions>
-                <condition id="6" name="On object clicked" sid="264522843256305" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">Start</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="795405557311297" type="System">
                     <param id="0" name="Layout">Level1</param>
                 </action>
             </actions>
@@ -102,6 +166,158 @@
                     <param id="0" name="Which">0</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="567332047164617">
+            <conditions>
+                <condition id="2" name="Key is down" sid="105064376087431" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="133672655659051" type="Player">
+                    <param id="0" name="Animation">&quot;RIGHT&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="395464836656325">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="903125565616361" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="768381006710056" type="System">
+                            <param id="0" name="Variable">PlayerWalls</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="486401009881964" type="Player">
+                            <param id="0" name="Object">VerticalWall</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="519886421592691" type="System">
+                            <param id="0" name="Variable">PlayerWalls</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="331584249349116">
+            <conditions>
+                <condition id="2" name="Key is down" sid="389686707140044" type="Keyboard">
+                    <param id="0" name="Key">40</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="950235627671330" type="Player">
+                    <param id="0" name="Animation">&quot;FRONT&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="957912851613462">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="530153961706321" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="900994539284628" type="System">
+                            <param id="0" name="Variable">PlayerWalls</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="697124806309693" type="Player">
+                            <param id="0" name="Object">HorizontalWall</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="624359426831634" type="System">
+                            <param id="0" name="Variable">PlayerWalls</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="270069697469898">
+            <conditions>
+                <condition id="2" name="Key is down" sid="343241130324668" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="453978203144686" type="Player">
+                    <param id="0" name="Animation">&quot;LEFT&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="511401866713351">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="585923210595645" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="141716416342858" type="System">
+                            <param id="0" name="Variable">PlayerWalls</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="451479570792110" type="Player">
+                            <param id="0" name="Object">VerticalWall</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="166272918782350" type="System">
+                            <param id="0" name="Variable">PlayerWalls</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="351532797270944">
+            <conditions>
+                <condition id="2" name="Key is down" sid="430379975792220" type="Keyboard">
+                    <param id="0" name="Key">38</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="497560808636341" type="Player">
+                    <param id="0" name="Animation">&quot;BACK&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="199682243538699">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="841388039439401" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="414336882818895" type="System">
+                            <param id="0" name="Variable">PlayerWalls</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="731689941953999" type="Player">
+                            <param id="0" name="Object">HorizontalWall</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="522441265052726" type="System">
+                            <param id="0" name="Variable">PlayerWalls</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

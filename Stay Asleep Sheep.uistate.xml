@@ -31,8 +31,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/Enemy/" />
-        <folder expanded="1" path="animation-folder/playerwall/" />
+        <folder expanded="1" path="animation-folder/VerticalWall/" />
         <folder expanded="1" path="animation-folder/Goal/" />
         <folder expanded="1" path="animation-folder/Jail/" />
+        <folder expanded="1" path="animation-folder/EnemyPath/" />
+        <folder expanded="1" path="animation-folder/HorizontalWall/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
     </folders-expanded>
 </c2uistate>

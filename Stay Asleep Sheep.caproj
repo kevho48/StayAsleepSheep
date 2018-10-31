@@ -20,6 +20,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -69,7 +70,7 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="FRONT" pingpong="0" repeatcount="1" repeatto="0" sid="388393422957376" speed="5">
                     <frame duration="1" hotspotX="0.46875" hotspotY="0.59375" original-source="C:\Users\akith\Downloads\Character_front.png">
-                        <image-point name="front" x="1" y="0.5" />
+                        <image-point name="front" x="0.5" y="1" />
                         <collision-poly>
                             <point x="0.144531" y="0.101563" />
                             <point x="0.789063" y="0.0898438" />
@@ -79,13 +80,19 @@
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="BACK" pingpong="0" repeatcount="1" repeatto="0" sid="946228677828756" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\Character_back.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\Character_back.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0" />
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="LEFT" pingpong="0" repeatcount="1" repeatto="0" sid="127256877703219" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\character_left.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\character_left.png">
+                        <image-point name="Imagepoint 1" x="0" y="0.5" />
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="RIGHT" pingpong="0" repeatcount="1" repeatto="0" sid="165830055757675" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\Character_right.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\Character_right.png">
+                        <image-point name="Imagepoint 1" x="1" y="0.5" />
+                    </frame>
                 </animation>
                 <animation framecount="2" loop="0" name="ID_RIGHT" pingpong="0" repeatcount="1" repeatto="0" sid="701055405505660" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\Character_front.png" />
@@ -143,7 +150,8 @@
         <object-type name="Enemy" sid="991251603188093">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable comment="0 = visible" name="Visible" sid="882096649703981" type="number" />
+                <instance-variable name="Found" sid="738999977138075" type="boolean" />
+                <instance-variable name="StepNum" sid="820696172595665" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="LineOfSight" sid="715829438849702">
@@ -154,6 +162,9 @@
                 </behavior-type>
                 <behavior-type name="Pathfinding" sid="112862953413684">
                     <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="583895290426997">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -229,7 +240,7 @@
         <object-type name="Keyboard" sid="897411221597833">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="playerwall" sid="141569760874231">
+        <object-type name="VerticalWall" sid="141569760874231">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="ShadowCaster" sid="627422587759272">
@@ -279,6 +290,48 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="915350626735800" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyPath" sid="886511203260356">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Variable1" sid="962459312749408" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="915454013398347" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HorizontalWall" sid="389292715320392">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="108852092909026">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="ShadowCaster" sid="114368343651258">
+                    <behavior id="shadowcaster" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="646932087721870" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0.402344" />
+                            <point x="1" y="0.410156" />
+                            <point x="1" y="0.535156" />
+                            <point x="0" y="0.523438" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="908959202523578">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="633768870992683" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>

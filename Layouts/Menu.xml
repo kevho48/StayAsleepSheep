@@ -85,14 +85,13 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Found>false</Found>
                         <StepNum>1</StepNum>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
-                                <range>100</range>
+                                <range>500</range>
                                 <cone-of-view>90</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -107,7 +106,7 @@
                                 <cell-size>30</cell-size>
                                 <cell-border>-1</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>200</max-speed>
+                                <max-speed>300</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>2000</deceleration>
                                 <rotate-speed>135</rotate-speed>

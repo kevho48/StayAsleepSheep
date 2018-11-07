@@ -27,22 +27,11 @@
                             <param id="0" name="Variable">PlayerWalls</param>
                             <param id="1" name="Value">5</param>
                         </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="252570580546520" type="Enemy">
+                            <param id="0" name="X">EnemyPath.X</param>
+                            <param id="1" name="Y">EnemyPath.Y</param>
+                        </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="945292003403980">
-                            <conditions>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="198120118992213" type="Enemy">
-                                    <param id="0" name="Instance variable">Found</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="549426041976872" type="Enemy">
-                                    <param id="0" name="X">EnemyPath.X</param>
-                                    <param id="1" name="Y">EnemyPath.Y</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -122,15 +111,35 @@
                 <action behavior="LineOfSight" id="2" name="Add obstacle" sid="682397468240465" type="Enemy">
                     <param id="0" name="Obstacle">HorizontalWall</param>
                 </action>
-                <action id="-21" name="Rotate toward position" sid="614825590216270" type="Enemy">
-                    <param id="0" name="Degrees">90</param>
-                    <param id="1" name="X">Player.X</param>
-                    <param id="2" name="Y">Player.Y</param>
-                </action>
-                <action id="-17" name="Move forward" sid="449324714936038" type="Enemy">
-                    <param id="0" name="Distance">2.5</param>
-                </action>
             </actions>
+            <sub-events>
+                <event-block sid="380438705950111">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="449668654193591" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="5" name="Add obstacle" sid="163015684891726" type="Enemy">
+                            <param id="0" name="Obstacle">HorizontalWall</param>
+                        </action>
+                        <action behavior="Pathfinding" id="5" name="Add obstacle" sid="240045636081293" type="Enemy">
+                            <param id="0" name="Obstacle">VerticalWall</param>
+                        </action>
+                        <action behavior="Pathfinding" id="5" name="Add obstacle" sid="532559003752380" type="Enemy">
+                            <param id="0" name="Obstacle">Obstacles</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="871518952719775" type="Enemy">
+                            <param id="0" name="X">Player.X</param>
+                            <param id="1" name="Y">Player.Y</param>
+                        </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="614825590216270" type="Enemy">
+                            <param id="0" name="X">Player.X</param>
+                            <param id="1" name="Y">Player.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="886953164649492">
             <conditions>

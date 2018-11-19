@@ -72,26 +72,44 @@
                     <frame duration="1" hotspotX="0.46875" hotspotY="0.59375" original-source="C:\Users\akith\Downloads\Character_front.png">
                         <image-point name="front" x="0.5" y="1" />
                         <collision-poly>
-                            <point x="0.144531" y="0.101563" />
-                            <point x="0.789063" y="0.0898438" />
-                            <point x="0.84375" y="1" />
-                            <point x="0.136719" y="1" />
+                            <point x="0.171875" y="0.039063" />
+                            <point x="0.78125" y="0.0390626" />
+                            <point x="0.792969" y="1" />
+                            <point x="0.164063" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="BACK" pingpong="0" repeatcount="1" repeatto="0" sid="946228677828756" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\Character_back.png">
                         <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        <collision-poly>
+                            <point x="0.167969" y="0.0429688" />
+                            <point x="0.777344" y="0.0351563" />
+                            <point x="0.792969" y="1" />
+                            <point x="0.15625" y="1" />
+                        </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="LEFT" pingpong="0" repeatcount="1" repeatto="0" sid="127256877703219" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\character_left.png">
                         <image-point name="Imagepoint 1" x="0" y="0.5" />
+                        <collision-poly>
+                            <point x="0.0625" y="0.0976563" />
+                            <point x="0.761719" y="0.0078125" />
+                            <point x="0.777344" y="1" />
+                            <point x="0.25" y="1" />
+                        </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="RIGHT" pingpong="0" repeatcount="1" repeatto="0" sid="165830055757675" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\Character_right.png">
                         <image-point name="Imagepoint 1" x="1" y="0.5" />
+                        <collision-poly>
+                            <point x="0.148438" y="0.0507813" />
+                            <point x="0.898438" y="0.0859375" />
+                            <point x="0.742188" y="1" />
+                            <point x="0.210938" y="1" />
+                        </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="2" loop="0" name="ID_RIGHT" pingpong="0" repeatcount="1" repeatto="0" sid="701055405505660" speed="5">
@@ -178,13 +196,34 @@
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="BACK" pingpong="0" repeatcount="1" repeatto="0" sid="835835333975319" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\enemy_back.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\enemy_back.png">
+                        <collision-poly>
+                            <point x="0.117188" y="0.105469" />
+                            <point x="0.882813" y="0.0820313" />
+                            <point x="0.878906" y="0.945313" />
+                            <point x="0.105469" y="0.957031" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="LEFT" pingpong="0" repeatcount="1" repeatto="0" sid="607235091792446" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\enemy_left.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\enemy_left.png">
+                        <collision-poly>
+                            <point x="0.152344" y="0.1875" />
+                            <point x="0.839844" y="0.078125" />
+                            <point x="0.722656" y="1" />
+                            <point x="0.292969" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="RIGHT" pingpong="0" repeatcount="1" repeatto="0" sid="593447909956831" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\enemy_right.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\enemy_right.png">
+                        <collision-poly>
+                            <point x="0.171875" y="0.0898438" />
+                            <point x="0.800781" y="0.1875" />
+                            <point x="0.738281" y="1" />
+                            <point x="0.28125" y="0.992188" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="2" loop="0" name="ID_LEFT" pingpong="0" repeatcount="1" repeatto="0" sid="569219206822205" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\enemy_front.png" />
@@ -324,6 +363,39 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="633768870992683" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyPath2" sid="776326566520927">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Variable1" sid="958950863869980" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="432462907044265" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyPath3" sid="443018750296287">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Variable1" sid="490417435117267" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="754347567611790" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyPath4" sid="430049135461374">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Variable1" sid="753700861247906" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="384040909137615" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>

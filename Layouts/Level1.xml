@@ -13,6 +13,375 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
+        <layer name="Layer 0" sid="644968146446658">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="EnemyPath" uid="10">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Variable1>2</Variable1>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>605</x>
+                        <y>135</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemyPath" uid="11">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Variable1>3</Variable1>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>608</x>
+                        <y>324</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemyPath" uid="12">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Variable1>4</Variable1>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>408</x>
+                        <y>326</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemyPath" uid="7">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Variable1>1</Variable1>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>407</x>
+                        <y>132</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemyPath2" uid="14">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Variable1>1</Variable1>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>882</x>
+                        <y>148</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemyPath2" uid="24">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Variable1>2</Variable1>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1115</x>
+                        <y>142</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemyPath2" uid="25">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Variable1>3</Variable1>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1122</x>
+                        <y>606</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemyPath2" uid="26">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Variable1>4</Variable1>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>875</x>
+                        <y>612</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemyPath3" uid="27">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Variable1>2</Variable1>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>243</x>
+                        <y>599</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemyPath3" uid="28">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Variable1>1</Variable1>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>625</x>
+                        <y>594</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemyPath4" uid="33">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Variable1>1</Variable1>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>82</x>
+                        <y>729</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemyPath4" uid="34">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Variable1>2</Variable1>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>345</x>
+                        <y>903</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemyPath4" uid="35">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Variable1>3</Variable1>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>565</x>
+                        <y>728</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemyPath4" uid="36">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Variable1>4</Variable1>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>837</x>
+                        <y>876</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
         <layer name="Game" sid="829693384905327">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
@@ -39,7 +408,7 @@
                     <behavior-instances>
                         <behavior-instance type="8Direction">
                             <properties>
-                                <max-speed>200</max-speed>
+                                <max-speed>100</max-speed>
                                 <acceleration>600</acceleration>
                                 <deceleration>1000</deceleration>
                                 <directions>8 directions</directions>
@@ -122,6 +491,171 @@
                     <world>
                         <x>510</x>
                         <y>105</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Enemy" uid="13">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <StepNum>1</StepNum>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>500</range>
+                                <cone-of-view>90</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pathfinding">
+                            <properties>
+                                <cell-size>30</cell-size>
+                                <cell-border>-1</cell-border>
+                                <obstacles>Solids</obstacles>
+                                <max-speed>300</max-speed>
+                                <acceleration>1000</acceleration>
+                                <deceleration>2000</deceleration>
+                                <rotate-speed>135</rotate-speed>
+                                <rotate-object>No</rotate-object>
+                                <diagonals>Enabled</diagonals>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>884</x>
+                        <y>153</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Enemy" uid="32">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <StepNum>1</StepNum>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>500</range>
+                                <cone-of-view>90</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pathfinding">
+                            <properties>
+                                <cell-size>30</cell-size>
+                                <cell-border>-1</cell-border>
+                                <obstacles>Solids</obstacles>
+                                <max-speed>300</max-speed>
+                                <acceleration>1000</acceleration>
+                                <deceleration>2000</deceleration>
+                                <rotate-speed>135</rotate-speed>
+                                <rotate-object>No</rotate-object>
+                                <diagonals>Enabled</diagonals>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>203</x>
+                        <y>896</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Enemy" uid="31">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <StepNum>1</StepNum>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>500</range>
+                                <cone-of-view>90</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pathfinding">
+                            <properties>
+                                <cell-size>30</cell-size>
+                                <cell-border>-1</cell-border>
+                                <obstacles>Solids</obstacles>
+                                <max-speed>300</max-speed>
+                                <acceleration>1000</acceleration>
+                                <deceleration>2000</deceleration>
+                                <rotate-speed>135</rotate-speed>
+                                <rotate-object>No</rotate-object>
+                                <diagonals>Enabled</diagonals>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>588</x>
+                        <y>591</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -251,7 +785,7 @@
                         <height>30</height>
                         <max-width>40</max-width>
                         <max-height>30</max-height>
-                        <data>119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,119,-1,-1,119,119,119,119,-1,-1,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,119,-1,-1,119,119,119,119,-1,-1,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,119,119,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,119,119,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,119,119,-1,-1,119,119,119,119,119,119,119,119,-1,-1,-1,-1,119,119,-1,256,288,256,288,-1,-1,119,119,-1,-1,-1,119,119,-1,-1,119,119,119,119,119,119,119,119,-1,-1,-1,-1,119,119,-1,257,289,257,289,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,256,288,256,288,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,257,289,257,289,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,288,320,288,320,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,288,320,288,320,-1,-1,-1,-1,289,321,288,320,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,289,321,289,321,-1,-1,-1,-1,289,321,289,321,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,288,320,320,320,-1,-1,-1,-1,288,320,288,320,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,289,321,321,321,-1,-1,-1,-1,289,321,289,321,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,256,288,256,288,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,257,289,257,289,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,288,320,288,320,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,256,288,256,288,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,289,321,289,321,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,257,289,257,289,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,288,320,288,320,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,289,321,289,321,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,-1,-1,-1,-1,89,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,-1,-1,-1,-1,89,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,119,-1,-1,54,86,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,288,320,288,320,-1,-1,119,119,119,119,119,119,-1,-1,55,87,119,-1,-1,-1,-1,-1,288,320,288,320,-1,-1,-1,-1,289,321,289,321,-1,-1,119,119,119,119,119,119,71,103,135,167,119,-1,-1,-1,-1,-1,289,321,289,321,-1,-1,-1,-1,288,320,288,320,-1,-1,119,119,119,119,119,119,72,104,136,168,119,-1,-1,-1,-1,-1,288,320,288,320,-1,-1,-1,-1,288,320,288,320,-1,-1,-1,-1,-1,-1,119,119,119,119,119,119,119,-1,-1,-1,-1,-1,289,321,289,321,-1,-1,-1,-1,289,321,289,321,-1,-1,-1,-1,-1,-1,119,119,119,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,119,119,119,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,119,119,119,119,119,119,119,119,119,-1,-1,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,-1,-1,119,119,119,119,119,-1,-1,-1,-1,119,119,119,119,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119</data>
+                        <data>119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,119,-1,-1,119,119,119,119,-1,-1,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,119,-1,-1,119,119,119,119,-1,-1,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,119,119,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,119,119,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,119,119,-1,-1,119,119,119,119,119,119,119,119,-1,-1,-1,-1,119,119,-1,256,288,256,-1,-1,-1,119,119,-1,-1,-1,119,119,-1,-1,119,119,119,119,119,119,119,119,-1,-1,-1,-1,119,119,-1,257,289,257,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,256,288,256,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,257,289,257,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,288,320,288,320,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,288,320,288,320,-1,-1,-1,-1,289,321,288,320,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,289,321,289,321,-1,-1,-1,-1,289,321,289,321,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,288,320,320,320,-1,-1,-1,-1,288,320,288,320,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,289,321,321,321,-1,-1,-1,-1,289,321,289,321,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,256,288,256,288,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,257,289,257,289,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,288,320,288,320,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,256,288,256,288,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,289,321,289,321,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,257,289,257,289,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,288,320,288,320,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,289,321,289,321,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,-1,-1,-1,-1,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,-1,-1,-1,-1,89,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,-1,-1,-1,-1,89,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,119,-1,-1,54,86,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,288,320,288,320,-1,-1,119,119,119,119,119,119,-1,-1,55,87,119,-1,-1,-1,-1,-1,288,320,288,320,-1,-1,-1,-1,289,321,289,321,-1,-1,119,119,119,119,119,119,71,103,135,167,119,-1,-1,-1,-1,-1,289,321,289,321,-1,-1,-1,-1,288,320,288,320,-1,-1,119,119,119,119,119,119,72,104,136,168,119,-1,-1,-1,-1,-1,288,320,288,320,-1,-1,-1,-1,288,320,288,320,-1,-1,-1,-1,-1,-1,119,119,119,119,119,119,119,-1,-1,-1,-1,-1,289,321,289,321,-1,-1,-1,-1,289,321,289,321,-1,-1,-1,-1,-1,-1,119,119,119,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,119,119,119,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,-1,-1,119,119,119,119,119,119,119,119,119,-1,-1,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,-1,-1,119,119,119,119,119,-1,-1,-1,-1,119,119,119,119,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119</data>
                     </tilemap-data>
                 </instance>
                 <instance type="Goal" uid="3">
@@ -346,150 +880,6 @@
                     <world>
                         <x>48.227127075</x>
                         <y>80.263763428</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-            </instances>
-            <effects />
-        </layer>
-        <layer name="Layer 0" sid="644968146446658">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="EnemyPath" uid="10">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Variable1>2</Variable1>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>840</x>
-                        <y>235</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="EnemyPath" uid="11">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Variable1>3</Variable1>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>726</x>
-                        <y>533</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="EnemyPath" uid="12">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Variable1>4</Variable1>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>381</x>
-                        <y>601</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="EnemyPath" uid="13">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Variable1>5</Variable1>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>373</x>
-                        <y>247</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="EnemyPath" uid="7">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Variable1>1</Variable1>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>510</x>
-                        <y>101</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>

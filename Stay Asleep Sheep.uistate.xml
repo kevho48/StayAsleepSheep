@@ -11,8 +11,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Menu</layout>
-        <layout active="1" order="1">Level1</layout>
-        <event-sheet order="2">Event sheet 1</event-sheet>
+        <layout order="1">Level1</layout>
+        <layout order="2">Level 2</layout>
+        <layout order="3">Level 3</layout>
+        <event-sheet active="1" order="4">Event sheet 1</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -34,11 +36,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/VerticalWall/" />
         <folder expanded="1" path="animation-folder/Goal/" />
         <folder expanded="1" path="animation-folder/Jail/" />
-        <folder expanded="1" path="animation-folder/EnemyPath/" />
+        <folder expanded="1" path="animation-folder/EnemyPath1/" />
         <folder expanded="1" path="animation-folder/HorizontalWall/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/EnemyPath2/" />
         <folder expanded="1" path="animation-folder/EnemyPath3/" />
         <folder expanded="1" path="animation-folder/EnemyPath4/" />
+        <folder expanded="1" path="animation-folder/EnemyPath5/" />
+        <folder expanded="1" path="animation-folder/EnemyPath6/" />
     </folders-expanded>
 </c2uistate>

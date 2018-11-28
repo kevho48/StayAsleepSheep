@@ -92,7 +92,7 @@
                             <properties>
                                 <obstacles>Solids</obstacles>
                                 <range>500</range>
-                                <cone-of-view>90</cone-of-view>
+                                <cone-of-view>30</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
@@ -103,7 +103,7 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>30</cell-size>
+                                <cell-size>35</cell-size>
                                 <cell-border>-1</cell-border>
                                 <obstacles>Solids</obstacles>
                                 <max-speed>300</max-speed>

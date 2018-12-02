@@ -103,7 +103,7 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>35</cell-size>
+                                <cell-size>32</cell-size>
                                 <cell-border>-1</cell-border>
                                 <obstacles>Solids</obstacles>
                                 <max-speed>300</max-speed>

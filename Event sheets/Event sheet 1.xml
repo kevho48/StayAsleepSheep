@@ -195,14 +195,14 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="942009104406808">
+                                <event-block sid="154722060150200">
                                     <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="131511228135164" type="Enemy">
-                                            <param id="0" name="Unique ID">82</param>
+                                        <condition id="-14" name="Pick by unique ID" sid="555045011560007" type="Enemy">
+                                            <param id="0" name="Unique ID">101</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Pathfinding" id="0" name="Find path" sid="599233415909018" type="Enemy">
+                                        <action behavior="Pathfinding" id="0" name="Find path" sid="989170426923324" type="Enemy">
                                             <param id="0" name="X">EnemyPath3.X</param>
                                             <param id="1" name="Y">EnemyPath3.Y</param>
                                         </action>
@@ -224,15 +224,899 @@
                                 <event-block sid="369179179456075">
                                     <conditions>
                                         <condition id="-14" name="Pick by unique ID" sid="268309614396593" type="Enemy">
-                                            <param id="0" name="Unique ID">85</param>
+                                            <param id="0" name="Unique ID">92</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action behavior="Pathfinding" id="0" name="Find path" sid="176216912767387" type="Enemy">
-                                            <param id="0" name="X">EnemyPath4.X</param>
-                                            <param id="1" name="Y">EnemyPath4.Y</param>
+                                            <param id="0" name="X">EnemyPath5.X</param>
+                                            <param id="1" name="Y">EnemyPath5.Y</param>
                                         </action>
                                     </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-block>
+                <event-block sid="964490326970093">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="289891041744230" type="Enemy" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-group description="" sid="236964666342414" title="level1paths">
+                            <sub-events>
+                                <event-block sid="666878826580148">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="657546424735847" type="Enemy">
+                                            <param id="0" name="Unique ID">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="484307228932254">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="421262536043537" type="Enemy">
+                                                    <param id="0" name="Object">EnemyPath1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="567978524397596" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">EnemyPath1.Variable1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="970120948927268">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="476026987506049" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="280152436321170" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="733235165771611">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="856506153843542" type="System">
+                                                    <param id="0" name="Object">EnemyPath1</param>
+                                                    <param id="1" name="Expression">EnemyPath1.Variable1</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Enemy.StepNum + 1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pathfinding" id="0" name="Find path" sid="325580978741049" type="Enemy">
+                                                    <param id="0" name="X">EnemyPath1.X</param>
+                                                    <param id="1" name="Y">EnemyPath1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="883069651375623">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="935805738951190" type="Enemy">
+                                            <param id="0" name="Unique ID">13</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="809896653474420">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="161477909565117" type="Enemy">
+                                                    <param id="0" name="Object">EnemyPath2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="391250602561439" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">EnemyPath2.Variable1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="845192891165778">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="260797355871451" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="930876163134550" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="442471991295372">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="483320751628395" type="System">
+                                                    <param id="0" name="Object">EnemyPath2</param>
+                                                    <param id="1" name="Expression">EnemyPath2.Variable1</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Enemy.StepNum + 1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pathfinding" id="0" name="Find path" sid="395614595438785" type="Enemy">
+                                                    <param id="0" name="X">EnemyPath2.X</param>
+                                                    <param id="1" name="Y">EnemyPath2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="487788938911016">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="449935107751550" type="Enemy">
+                                            <param id="0" name="Unique ID">31</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="128844779952959">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="429397329919168" type="Enemy">
+                                                    <param id="0" name="Object">EnemyPath3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="698959947765422" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">EnemyPath3.Variable1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="284272546631534">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="344646069531993" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="854798142207528" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="385029754383929">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="411036890195229" type="System">
+                                                    <param id="0" name="Object">EnemyPath3</param>
+                                                    <param id="1" name="Expression">EnemyPath3.Variable1</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Enemy.StepNum + 1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pathfinding" id="0" name="Find path" sid="642843406191395" type="Enemy">
+                                                    <param id="0" name="X">EnemyPath3.X</param>
+                                                    <param id="1" name="Y">EnemyPath3.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="641927640533758">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="306296359077289" type="Enemy">
+                                            <param id="0" name="Unique ID">97</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="246669351983062">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="245236369401726" type="Enemy">
+                                                    <param id="0" name="Object">EnemyPath4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="918149539778527" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">EnemyPath4.Variable1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="475231530968528">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="778228970335939" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="634132381551973" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="374043345068428">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="567093613856042" type="System">
+                                                    <param id="0" name="Object">EnemyPath4</param>
+                                                    <param id="1" name="Expression">EnemyPath4.Variable1</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Enemy.StepNum + 1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pathfinding" id="0" name="Find path" sid="767578221159234" type="Enemy">
+                                                    <param id="0" name="X">EnemyPath4.X</param>
+                                                    <param id="1" name="Y">EnemyPath4.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="782704999794123" title="level2paths">
+                            <sub-events>
+                                <event-block sid="174144905941999">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="495889300915341" type="Enemy">
+                                            <param id="0" name="Unique ID">18</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="449468907130271">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="102979620429690" type="Enemy">
+                                                    <param id="0" name="Object">EnemyPath1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="569994522745881" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">EnemyPath1.Variable1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="556434757395737">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="293686028803822" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="775649313883512" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="241875673163863">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="326772700010361" type="System">
+                                                    <param id="0" name="Object">EnemyPath1</param>
+                                                    <param id="1" name="Expression">EnemyPath1.Variable1</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Enemy.StepNum + 1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pathfinding" id="0" name="Find path" sid="398793126670769" type="Enemy">
+                                                    <param id="0" name="X">EnemyPath1.X</param>
+                                                    <param id="1" name="Y">EnemyPath1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="496783293357568">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="445309845415979" type="Enemy">
+                                            <param id="0" name="Unique ID">50</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="605872864862824">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="802588001612061" type="Enemy">
+                                                    <param id="0" name="Object">EnemyPath2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="855431987240752" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">EnemyPath2.Variable1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="126738778969880">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="365564119077121" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="411970462312720" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="925454029275873">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="968217643997642" type="System">
+                                                    <param id="0" name="Object">EnemyPath2</param>
+                                                    <param id="1" name="Expression">EnemyPath2.Variable1</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Enemy.StepNum + 1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pathfinding" id="0" name="Find path" sid="786548262869481" type="Enemy">
+                                                    <param id="0" name="X">EnemyPath2.X</param>
+                                                    <param id="1" name="Y">EnemyPath2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="834289648861379">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="758020049568952" type="Enemy">
+                                            <param id="0" name="Unique ID">42</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="861354949068200">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="399952341311504" type="Enemy">
+                                                    <param id="0" name="Object">EnemyPath3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="434952605690992" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">EnemyPath3.Variable1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="706744573267937">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="899148193442489" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="152270162258892" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="287724770381928">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="945958250138959" type="System">
+                                                    <param id="0" name="Object">EnemyPath3</param>
+                                                    <param id="1" name="Expression">EnemyPath3.Variable1</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Enemy.StepNum + 1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pathfinding" id="0" name="Find path" sid="751717078374851" type="Enemy">
+                                                    <param id="0" name="X">EnemyPath3.X</param>
+                                                    <param id="1" name="Y">EnemyPath3.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="555128280719940">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="128979130924095" type="Enemy">
+                                            <param id="0" name="Unique ID">47</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="497996973733983">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="147039849551559" type="Enemy">
+                                                    <param id="0" name="Object">EnemyPath4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="816226920696587" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">EnemyPath4.Variable1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="987770728520780">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="911114493305630" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="597416301409636" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="485280369503823">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="479214160947553" type="System">
+                                                    <param id="0" name="Object">EnemyPath4</param>
+                                                    <param id="1" name="Expression">EnemyPath4.Variable1</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Enemy.StepNum + 1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pathfinding" id="0" name="Find path" sid="786526642997151" type="Enemy">
+                                                    <param id="0" name="X">EnemyPath4.X</param>
+                                                    <param id="1" name="Y">EnemyPath4.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="767372343935708">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="732963399702775" type="Enemy">
+                                            <param id="0" name="Unique ID">106</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="663668328102298">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="608120114867361" type="Enemy">
+                                                    <param id="0" name="Object">EnemyPath5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="816696390039619" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">EnemyPath5.Variable1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="656688507322560">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="984342437611836" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="615998206536748" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="799772625723590">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="200423367131500" type="System">
+                                                    <param id="0" name="Object">EnemyPath5</param>
+                                                    <param id="1" name="Expression">EnemyPath5.Variable1</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Enemy.StepNum + 1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pathfinding" id="0" name="Find path" sid="948976061405080" type="Enemy">
+                                                    <param id="0" name="X">EnemyPath5.X</param>
+                                                    <param id="1" name="Y">EnemyPath5.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="496767490421248">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="718816129463082" type="Enemy">
+                                            <param id="0" name="Unique ID">54</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="519106214768700">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="636930357483079" type="Enemy">
+                                                    <param id="0" name="Object">EnemyPath6</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="830456736975993" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">EnemyPath6.Variable1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="670007174332043">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="567300766310855" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="720112641876677" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="530554827122753">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="487211456992175" type="System">
+                                                    <param id="0" name="Object">EnemyPath6</param>
+                                                    <param id="1" name="Expression">EnemyPath6.Variable1</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Enemy.StepNum + 1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pathfinding" id="0" name="Find path" sid="603175292906242" type="Enemy">
+                                                    <param id="0" name="X">EnemyPath6.X</param>
+                                                    <param id="1" name="Y">EnemyPath6.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="547550560442753" title="level3paths">
+                            <sub-events>
+                                <event-block sid="267476605192779">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="545768084163818" type="Enemy">
+                                            <param id="0" name="Unique ID">64</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="118497786952329">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="610384191743214" type="Enemy">
+                                                    <param id="0" name="Object">EnemyPath1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="638092861750095" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">EnemyPath1.Variable1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="440740613229031">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="924149248940727" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="428670267658759" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="684036604969556">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="601157625373308" type="System">
+                                                    <param id="0" name="Object">EnemyPath1</param>
+                                                    <param id="1" name="Expression">EnemyPath1.Variable1</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Enemy.StepNum + 1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pathfinding" id="0" name="Find path" sid="666729047080073" type="Enemy">
+                                                    <param id="0" name="X">EnemyPath1.X</param>
+                                                    <param id="1" name="Y">EnemyPath1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="447145649063610">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="320141579129290" type="Enemy">
+                                            <param id="0" name="Unique ID">77</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="943045687889539">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="159118090983748" type="Enemy">
+                                                    <param id="0" name="Object">EnemyPath2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="247463830499617" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">EnemyPath2.Variable1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="659603563783345">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="907332429366664" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">9</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="120535175492400" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="691061605028595">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="943792211453606" type="System">
+                                                    <param id="0" name="Object">EnemyPath2</param>
+                                                    <param id="1" name="Expression">EnemyPath2.Variable1</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Enemy.StepNum + 1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pathfinding" id="0" name="Find path" sid="393368133201095" type="Enemy">
+                                                    <param id="0" name="X">EnemyPath2.X</param>
+                                                    <param id="1" name="Y">EnemyPath2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="618050862910874">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="972985718089776" type="Enemy">
+                                            <param id="0" name="Unique ID">101</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="263934686572570">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="744445448725285" type="Enemy">
+                                                    <param id="0" name="Object">EnemyPath3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="896137018919417" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">EnemyPath3.Variable1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="790141920843062">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="540178465276639" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="231241238914817" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="654889288020904">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="930037328036850" type="System">
+                                                    <param id="0" name="Object">EnemyPath3</param>
+                                                    <param id="1" name="Expression">EnemyPath3.Variable1</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Enemy.StepNum + 1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pathfinding" id="0" name="Find path" sid="935722756235686" type="Enemy">
+                                                    <param id="0" name="X">EnemyPath3.X</param>
+                                                    <param id="1" name="Y">EnemyPath3.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="250474679267790">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="628624550381541" type="Enemy">
+                                            <param id="0" name="Unique ID">85</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="764429924446293">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="531307917842165" type="Enemy">
+                                                    <param id="0" name="Object">EnemyPath4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="425816726465970" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">EnemyPath4.Variable1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="698199469325382">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="505789833350419" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="483577618341709" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="611150531466927">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="337039987324530" type="System">
+                                                    <param id="0" name="Object">EnemyPath4</param>
+                                                    <param id="1" name="Expression">EnemyPath4.Variable1</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Enemy.StepNum + 1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pathfinding" id="0" name="Find path" sid="102484590626927" type="Enemy">
+                                                    <param id="0" name="X">EnemyPath4.X</param>
+                                                    <param id="1" name="Y">EnemyPath4.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="746363442092047">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="104293318141708" type="Enemy">
+                                            <param id="0" name="Unique ID">92</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="901130658287662">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="146650367719180" type="Enemy">
+                                                    <param id="0" name="Object">EnemyPath5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="671507378985848" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">EnemyPath5.Variable1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="484138144893858">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="283059678860365" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="722819563825790" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="583537829449670">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="233840915282203" type="System">
+                                                    <param id="0" name="Object">EnemyPath5</param>
+                                                    <param id="1" name="Expression">EnemyPath5.Variable1</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Enemy.StepNum + 1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pathfinding" id="0" name="Find path" sid="193880070743753" type="Enemy">
+                                                    <param id="0" name="X">EnemyPath5.X</param>
+                                                    <param id="1" name="Y">EnemyPath5.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="174233502135564">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="416302150844291" type="Enemy">
+                                            <param id="0" name="Unique ID">88</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="258960311003120">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="925957304543710" type="Enemy">
+                                                    <param id="0" name="Object">EnemyPath6</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="210607196381561" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">EnemyPath6.Variable1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="648232277554868">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="360085965668105" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="593032054716216" type="Enemy">
+                                                    <param id="0" name="Instance variable">StepNum</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="407420886618048">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="584028526475332" type="System">
+                                                    <param id="0" name="Object">EnemyPath6</param>
+                                                    <param id="1" name="Expression">EnemyPath6.Variable1</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Enemy.StepNum + 1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pathfinding" id="0" name="Find path" sid="221600778343010" type="Enemy">
+                                                    <param id="0" name="X">EnemyPath6.X</param>
+                                                    <param id="1" name="Y">EnemyPath6.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-group>
@@ -247,728 +1131,6 @@
             <actions>
                 <action behavior="Pathfinding" id="1" name="Move along path" sid="519876924567309" type="Enemy" />
             </actions>
-        </event-block>
-        <event-block sid="964490326970093">
-            <conditions>
-                <condition behavior="Pathfinding" id="5" name="On arrived" sid="289891041744230" type="Enemy" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-group description="" sid="236964666342414" title="level1paths">
-                    <sub-events>
-                        <event-block sid="666878826580148">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="657546424735847" type="Enemy">
-                                    <param id="0" name="Unique ID">4</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="484307228932254">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="421262536043537" type="Enemy">
-                                            <param id="0" name="Object">EnemyPath1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="567978524397596" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">EnemyPath1.Variable1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="970120948927268">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="476026987506049" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="280152436321170" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="733235165771611">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="856506153843542" type="System">
-                                            <param id="0" name="Object">EnemyPath1</param>
-                                            <param id="1" name="Expression">EnemyPath1.Variable1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">Enemy.StepNum + 1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pathfinding" id="0" name="Find path" sid="325580978741049" type="Enemy">
-                                            <param id="0" name="X">EnemyPath1.X</param>
-                                            <param id="1" name="Y">EnemyPath1.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="883069651375623">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="935805738951190" type="Enemy">
-                                    <param id="0" name="Unique ID">13</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="809896653474420">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="161477909565117" type="Enemy">
-                                            <param id="0" name="Object">EnemyPath2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="391250602561439" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">EnemyPath2.Variable1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="845192891165778">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="260797355871451" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="930876163134550" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="442471991295372">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="483320751628395" type="System">
-                                            <param id="0" name="Object">EnemyPath2</param>
-                                            <param id="1" name="Expression">EnemyPath2.Variable1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">Enemy.StepNum + 1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pathfinding" id="0" name="Find path" sid="395614595438785" type="Enemy">
-                                            <param id="0" name="X">EnemyPath2.X</param>
-                                            <param id="1" name="Y">EnemyPath2.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="487788938911016">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="449935107751550" type="Enemy">
-                                    <param id="0" name="Unique ID">31</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="128844779952959">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="429397329919168" type="Enemy">
-                                            <param id="0" name="Object">EnemyPath3</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="698959947765422" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">EnemyPath3.Variable1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="284272546631534">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="344646069531993" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="854798142207528" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="385029754383929">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="411036890195229" type="System">
-                                            <param id="0" name="Object">EnemyPath3</param>
-                                            <param id="1" name="Expression">EnemyPath3.Variable1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">Enemy.StepNum + 1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pathfinding" id="0" name="Find path" sid="642843406191395" type="Enemy">
-                                            <param id="0" name="X">EnemyPath3.X</param>
-                                            <param id="1" name="Y">EnemyPath3.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="641927640533758">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="306296359077289" type="Enemy">
-                                    <param id="0" name="Unique ID">97</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="246669351983062">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="245236369401726" type="Enemy">
-                                            <param id="0" name="Object">EnemyPath4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="918149539778527" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">EnemyPath4.Variable1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="475231530968528">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="778228970335939" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="634132381551973" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="374043345068428">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="567093613856042" type="System">
-                                            <param id="0" name="Object">EnemyPath4</param>
-                                            <param id="1" name="Expression">EnemyPath4.Variable1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">Enemy.StepNum + 1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pathfinding" id="0" name="Find path" sid="767578221159234" type="Enemy">
-                                            <param id="0" name="X">EnemyPath4.X</param>
-                                            <param id="1" name="Y">EnemyPath4.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="782704999794123" title="level2paths">
-                    <sub-events>
-                        <event-block sid="174144905941999">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="495889300915341" type="Enemy">
-                                    <param id="0" name="Unique ID">18</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="449468907130271">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="102979620429690" type="Enemy">
-                                            <param id="0" name="Object">EnemyPath1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="569994522745881" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">EnemyPath1.Variable1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="556434757395737">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="293686028803822" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="775649313883512" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="241875673163863">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="326772700010361" type="System">
-                                            <param id="0" name="Object">EnemyPath1</param>
-                                            <param id="1" name="Expression">EnemyPath1.Variable1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">Enemy.StepNum + 1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pathfinding" id="0" name="Find path" sid="398793126670769" type="Enemy">
-                                            <param id="0" name="X">EnemyPath1.X</param>
-                                            <param id="1" name="Y">EnemyPath1.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="496783293357568">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="445309845415979" type="Enemy">
-                                    <param id="0" name="Unique ID">50</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="605872864862824">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="802588001612061" type="Enemy">
-                                            <param id="0" name="Object">EnemyPath2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="855431987240752" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">EnemyPath2.Variable1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="126738778969880">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="365564119077121" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="411970462312720" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="925454029275873">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="968217643997642" type="System">
-                                            <param id="0" name="Object">EnemyPath2</param>
-                                            <param id="1" name="Expression">EnemyPath2.Variable1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">Enemy.StepNum + 1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pathfinding" id="0" name="Find path" sid="786548262869481" type="Enemy">
-                                            <param id="0" name="X">EnemyPath2.X</param>
-                                            <param id="1" name="Y">EnemyPath2.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="834289648861379">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="758020049568952" type="Enemy">
-                                    <param id="0" name="Unique ID">42</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="861354949068200">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="399952341311504" type="Enemy">
-                                            <param id="0" name="Object">EnemyPath3</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="434952605690992" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">EnemyPath3.Variable1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="706744573267937">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="899148193442489" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="152270162258892" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="287724770381928">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="945958250138959" type="System">
-                                            <param id="0" name="Object">EnemyPath3</param>
-                                            <param id="1" name="Expression">EnemyPath3.Variable1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">Enemy.StepNum + 1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pathfinding" id="0" name="Find path" sid="751717078374851" type="Enemy">
-                                            <param id="0" name="X">EnemyPath3.X</param>
-                                            <param id="1" name="Y">EnemyPath3.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="555128280719940">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="128979130924095" type="Enemy">
-                                    <param id="0" name="Unique ID">47</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="497996973733983">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="147039849551559" type="Enemy">
-                                            <param id="0" name="Object">EnemyPath4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="816226920696587" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">EnemyPath4.Variable1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="987770728520780">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="911114493305630" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="597416301409636" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="485280369503823">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="479214160947553" type="System">
-                                            <param id="0" name="Object">EnemyPath4</param>
-                                            <param id="1" name="Expression">EnemyPath4.Variable1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">Enemy.StepNum + 1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pathfinding" id="0" name="Find path" sid="786526642997151" type="Enemy">
-                                            <param id="0" name="X">EnemyPath4.X</param>
-                                            <param id="1" name="Y">EnemyPath4.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="767372343935708">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="732963399702775" type="Enemy">
-                                    <param id="0" name="Unique ID">106</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="663668328102298">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="608120114867361" type="Enemy">
-                                            <param id="0" name="Object">EnemyPath5</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="816696390039619" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">EnemyPath5.Variable1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="656688507322560">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="984342437611836" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="615998206536748" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="799772625723590">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="200423367131500" type="System">
-                                            <param id="0" name="Object">EnemyPath5</param>
-                                            <param id="1" name="Expression">EnemyPath5.Variable1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">Enemy.StepNum + 1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pathfinding" id="0" name="Find path" sid="948976061405080" type="Enemy">
-                                            <param id="0" name="X">EnemyPath5.X</param>
-                                            <param id="1" name="Y">EnemyPath5.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="496767490421248">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="718816129463082" type="Enemy">
-                                    <param id="0" name="Unique ID">54</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="519106214768700">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="636930357483079" type="Enemy">
-                                            <param id="0" name="Object">EnemyPath6</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="830456736975993" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">EnemyPath6.Variable1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="670007174332043">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="567300766310855" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="720112641876677" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="530554827122753">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="487211456992175" type="System">
-                                            <param id="0" name="Object">EnemyPath6</param>
-                                            <param id="1" name="Expression">EnemyPath6.Variable1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">Enemy.StepNum + 1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pathfinding" id="0" name="Find path" sid="603175292906242" type="Enemy">
-                                            <param id="0" name="X">EnemyPath6.X</param>
-                                            <param id="1" name="Y">EnemyPath6.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="547550560442753" title="level3paths">
-                    <sub-events>
-                        <event-block sid="267476605192779">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="545768084163818" type="Enemy">
-                                    <param id="0" name="Unique ID">64</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="118497786952329">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="610384191743214" type="Enemy">
-                                            <param id="0" name="Object">EnemyPath1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="638092861750095" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">EnemyPath1.Variable1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="440740613229031">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="924149248940727" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="428670267658759" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="684036604969556">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="601157625373308" type="System">
-                                            <param id="0" name="Object">EnemyPath1</param>
-                                            <param id="1" name="Expression">EnemyPath1.Variable1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">Enemy.StepNum + 1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pathfinding" id="0" name="Find path" sid="666729047080073" type="Enemy">
-                                            <param id="0" name="X">EnemyPath1.X</param>
-                                            <param id="1" name="Y">EnemyPath1.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="447145649063610">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="320141579129290" type="Enemy">
-                                    <param id="0" name="Unique ID">77</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="943045687889539">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="159118090983748" type="Enemy">
-                                            <param id="0" name="Object">EnemyPath2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="247463830499617" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">EnemyPath2.Variable1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="659603563783345">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="907332429366664" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">9</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="120535175492400" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="691061605028595">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="943792211453606" type="System">
-                                            <param id="0" name="Object">EnemyPath2</param>
-                                            <param id="1" name="Expression">EnemyPath2.Variable1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">Enemy.StepNum + 1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pathfinding" id="0" name="Find path" sid="393368133201095" type="Enemy">
-                                            <param id="0" name="X">EnemyPath2.X</param>
-                                            <param id="1" name="Y">EnemyPath2.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="250474679267790">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="628624550381541" type="Enemy">
-                                    <param id="0" name="Unique ID">85</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="764429924446293">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="531307917842165" type="Enemy">
-                                            <param id="0" name="Object">EnemyPath4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="425816726465970" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">EnemyPath4.Variable1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="698199469325382">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="505789833350419" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">3</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="483577618341709" type="Enemy">
-                                            <param id="0" name="Instance variable">StepNum</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="611150531466927">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="337039987324530" type="System">
-                                            <param id="0" name="Object">EnemyPath4</param>
-                                            <param id="1" name="Expression">EnemyPath4.Variable1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">Enemy.StepNum + 1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pathfinding" id="0" name="Find path" sid="102484590626927" type="Enemy">
-                                            <param id="0" name="X">EnemyPath4.X</param>
-                                            <param id="1" name="Y">EnemyPath4.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-            </sub-events>
         </event-block>
         <event-block sid="616223591726279">
             <conditions>
@@ -1024,7 +1186,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="886953164649492">
+        <event-block disabled="1" sid="886953164649492">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="464890563587213" type="Enemy">
                     <param id="0" name="Object">Player</param>
@@ -1059,169 +1221,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="713419357839153">
-            <conditions>
-                <condition behavior="Pathfinding" id="4" name="Is moving along path" sid="135700024239622" type="Enemy" />
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="252873416250939" type="Enemy">
-                    <param id="0" name="Animation">&quot;FRONT&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="567332047164617">
-            <conditions>
-                <condition id="2" name="Key is down" sid="105064376087431" type="Keyboard">
-                    <param id="0" name="Key">39</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="133672655659051" type="Player">
-                    <param id="0" name="Animation">&quot;RIGHT&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="395464836656325">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="903125565616361" type="Keyboard">
-                            <param id="0" name="Key">32</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="768381006710056" type="System">
-                            <param id="0" name="Variable">PlayerWalls</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="486401009881964" type="Player">
-                            <param id="0" name="Object">VerticalWall</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                        <action id="-11" name="Subtract from" sid="519886421592691" type="System">
-                            <param id="0" name="Variable">PlayerWalls</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="331584249349116">
-            <conditions>
-                <condition id="2" name="Key is down" sid="389686707140044" type="Keyboard">
-                    <param id="0" name="Key">40</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="950235627671330" type="Player">
-                    <param id="0" name="Animation">&quot;FRONT&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="957912851613462">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="530153961706321" type="Keyboard">
-                            <param id="0" name="Key">32</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="900994539284628" type="System">
-                            <param id="0" name="Variable">PlayerWalls</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="697124806309693" type="Player">
-                            <param id="0" name="Object">HorizontalWall</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                        <action id="-11" name="Subtract from" sid="624359426831634" type="System">
-                            <param id="0" name="Variable">PlayerWalls</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="270069697469898">
-            <conditions>
-                <condition id="2" name="Key is down" sid="343241130324668" type="Keyboard">
-                    <param id="0" name="Key">37</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="453978203144686" type="Player">
-                    <param id="0" name="Animation">&quot;LEFT&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="511401866713351">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="585923210595645" type="Keyboard">
-                            <param id="0" name="Key">32</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="141716416342858" type="System">
-                            <param id="0" name="Variable">PlayerWalls</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="451479570792110" type="Player">
-                            <param id="0" name="Object">VerticalWall</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                        <action id="-11" name="Subtract from" sid="166272918782350" type="System">
-                            <param id="0" name="Variable">PlayerWalls</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="351532797270944">
-            <conditions>
-                <condition id="2" name="Key is down" sid="430379975792220" type="Keyboard">
-                    <param id="0" name="Key">38</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="497560808636341" type="Player">
-                    <param id="0" name="Animation">&quot;BACK&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="199682243538699">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="841388039439401" type="Keyboard">
-                            <param id="0" name="Key">32</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="414336882818895" type="System">
-                            <param id="0" name="Variable">PlayerWalls</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="731689941953999" type="Player">
-                            <param id="0" name="Object">HorizontalWall</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                        <action id="-11" name="Subtract from" sid="522441265052726" type="System">
-                            <param id="0" name="Variable">PlayerWalls</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
         <event-block sid="578458093408809">
             <conditions>
                 <condition id="2" name="Key is down" sid="126144916844719" type="Keyboard">
@@ -1240,16 +1239,6 @@
                         <action id="-9" name="Destroy" sid="157453848682184" type="VerticalWall" />
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="447305776726002">
-            <conditions>
-                <condition id="2" name="Key is down" sid="938840526793152" type="Keyboard">
-                    <param id="0" name="Key">68</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="105713394773524">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="612573997764752" type="Player">
@@ -1262,15 +1251,257 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="369139270899433">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="652362640615725" type="System">
-                    <param id="0" name="First value">Enemy.Pathfinding.MovingAngle</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">90</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
+        <event-group description="" sid="805970926455069" title="Animations">
+            <sub-events>
+                <event-block sid="567332047164617">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="105064376087431" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="133672655659051" type="Player">
+                            <param id="0" name="Animation">&quot;RIGHT&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="395464836656325">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="903125565616361" type="Keyboard">
+                                    <param id="0" name="Key">32</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="768381006710056" type="System">
+                                    <param id="0" name="Variable">PlayerWalls</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="486401009881964" type="Player">
+                                    <param id="0" name="Object">VerticalWall</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="519886421592691" type="System">
+                                    <param id="0" name="Variable">PlayerWalls</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="331584249349116">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="389686707140044" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="950235627671330" type="Player">
+                            <param id="0" name="Animation">&quot;FRONT&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="957912851613462">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="530153961706321" type="Keyboard">
+                                    <param id="0" name="Key">32</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="900994539284628" type="System">
+                                    <param id="0" name="Variable">PlayerWalls</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="697124806309693" type="Player">
+                                    <param id="0" name="Object">HorizontalWall</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="624359426831634" type="System">
+                                    <param id="0" name="Variable">PlayerWalls</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="270069697469898">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="343241130324668" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="453978203144686" type="Player">
+                            <param id="0" name="Animation">&quot;LEFT&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="511401866713351">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="585923210595645" type="Keyboard">
+                                    <param id="0" name="Key">32</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="141716416342858" type="System">
+                                    <param id="0" name="Variable">PlayerWalls</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="451479570792110" type="Player">
+                                    <param id="0" name="Object">VerticalWall</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="166272918782350" type="System">
+                                    <param id="0" name="Variable">PlayerWalls</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="351532797270944">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="430379975792220" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="497560808636341" type="Player">
+                            <param id="0" name="Animation">&quot;BACK&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="199682243538699">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="841388039439401" type="Keyboard">
+                                    <param id="0" name="Key">32</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="414336882818895" type="System">
+                                    <param id="0" name="Variable">PlayerWalls</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="731689941953999" type="Player">
+                                    <param id="0" name="Object">HorizontalWall</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="522441265052726" type="System">
+                                    <param id="0" name="Variable">PlayerWalls</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="343333573302074">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="4" name="Is moving along path" sid="723409316972387" type="Enemy" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="826054220961919">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="200162280378434" type="System">
+                                    <param id="0" name="Object">Enemy</param>
+                                    <param id="1" name="Expression">Enemy.Pathfinding.MovingAngle</param>
+                                    <param id="2" name="Comparison">5</param>
+                                    <param id="3" name="Value">-45</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="820519466258470" type="System">
+                                    <param id="0" name="Object">Enemy</param>
+                                    <param id="1" name="Expression">Enemy.Pathfinding.MovingAngle</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">45</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="530649374807847" type="Enemy">
+                                    <param id="0" name="Animation">&quot;RIGHT&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="426174801920375">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="346775279615478" type="System">
+                                    <param id="0" name="Object">Enemy</param>
+                                    <param id="1" name="Expression">Enemy.Pathfinding.MovingAngle</param>
+                                    <param id="2" name="Comparison">5</param>
+                                    <param id="3" name="Value">45</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="967852371579022" type="System">
+                                    <param id="0" name="Object">Enemy</param>
+                                    <param id="1" name="Expression">Enemy.Pathfinding.MovingAngle</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">135</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="450978165697802" type="Enemy">
+                                    <param id="0" name="Animation">&quot;FRONT&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="898526060393278">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="168097388312419" type="System">
+                                    <param id="0" name="Object">Enemy</param>
+                                    <param id="1" name="Expression">Enemy.Pathfinding.MovingAngle</param>
+                                    <param id="2" name="Comparison">5</param>
+                                    <param id="3" name="Value">135</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="712290807360560" type="System">
+                                    <param id="0" name="Object">Enemy</param>
+                                    <param id="1" name="Expression">Enemy.Pathfinding.MovingAngle</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">225</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="918345268485315" type="Enemy">
+                                    <param id="0" name="Animation">&quot;LEFT&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="320577521369486">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="408826633699271" type="System">
+                                    <param id="0" name="Object">Enemy</param>
+                                    <param id="1" name="Expression">Enemy.Pathfinding.MovingAngle</param>
+                                    <param id="2" name="Comparison">5</param>
+                                    <param id="3" name="Value">225</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="122687320563145" type="System">
+                                    <param id="0" name="Object">Enemy</param>
+                                    <param id="1" name="Expression">Enemy.Pathfinding.MovingAngle</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">315</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="382954050624477" type="Enemy">
+                                    <param id="0" name="Animation">&quot;BACK&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

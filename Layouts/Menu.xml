@@ -109,7 +109,7 @@
                                 <cell-size>16</cell-size>
                                 <cell-border>0</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>300</max-speed>
+                                <max-speed>200</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>2000</deceleration>
                                 <rotate-speed>135</rotate-speed>

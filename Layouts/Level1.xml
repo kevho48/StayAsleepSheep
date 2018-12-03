@@ -430,7 +430,7 @@
                                 <cell-size>16</cell-size>
                                 <cell-border>0</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>300</max-speed>
+                                <max-speed>200</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>2000</deceleration>
                                 <rotate-speed>135</rotate-speed>
@@ -488,7 +488,7 @@
                                 <cell-size>16</cell-size>
                                 <cell-border>0</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>300</max-speed>
+                                <max-speed>200</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>2000</deceleration>
                                 <rotate-speed>135</rotate-speed>
@@ -546,7 +546,7 @@
                                 <cell-size>16</cell-size>
                                 <cell-border>0</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>300</max-speed>
+                                <max-speed>200</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>2000</deceleration>
                                 <rotate-speed>135</rotate-speed>
@@ -604,7 +604,7 @@
                                 <cell-size>16</cell-size>
                                 <cell-border>0</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>300</max-speed>
+                                <max-speed>200</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>2000</deceleration>
                                 <rotate-speed>135</rotate-speed>
@@ -694,7 +694,7 @@
                         <width>1</width>
                         <height>1</height>
                         <depth>0</depth>
-                        <hotspotX>1</hotspotX>
+                        <hotspotX>0</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

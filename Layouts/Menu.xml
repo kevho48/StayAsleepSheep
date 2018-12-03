@@ -86,6 +86,9 @@
                     </properties>
                     <instance-variables>
                         <StepNum>1</StepNum>
+                        <Alerted>false</Alerted>
+                        <alertCooldown>0</alertCooldown>
+                        <hasLineOfSight>false</hasLineOfSight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LineOfSight">
@@ -103,8 +106,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>32</cell-size>
-                                <cell-border>-1</cell-border>
+                                <cell-size>16</cell-size>
+                                <cell-border>0</cell-border>
                                 <obstacles>Solids</obstacles>
                                 <max-speed>300</max-speed>
                                 <acceleration>1000</acceleration>

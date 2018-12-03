@@ -407,6 +407,9 @@
                     </properties>
                     <instance-variables>
                         <StepNum>1</StepNum>
+                        <Alerted>false</Alerted>
+                        <alertCooldown>0</alertCooldown>
+                        <hasLineOfSight>false</hasLineOfSight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LineOfSight">
@@ -424,8 +427,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>32</cell-size>
-                                <cell-border>-1</cell-border>
+                                <cell-size>16</cell-size>
+                                <cell-border>0</cell-border>
                                 <obstacles>Solids</obstacles>
                                 <max-speed>300</max-speed>
                                 <acceleration>1000</acceleration>
@@ -462,6 +465,9 @@
                     </properties>
                     <instance-variables>
                         <StepNum>1</StepNum>
+                        <Alerted>false</Alerted>
+                        <alertCooldown>0</alertCooldown>
+                        <hasLineOfSight>false</hasLineOfSight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LineOfSight">
@@ -479,8 +485,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>32</cell-size>
-                                <cell-border>-1</cell-border>
+                                <cell-size>16</cell-size>
+                                <cell-border>0</cell-border>
                                 <obstacles>Solids</obstacles>
                                 <max-speed>300</max-speed>
                                 <acceleration>1000</acceleration>
@@ -517,6 +523,9 @@
                     </properties>
                     <instance-variables>
                         <StepNum>1</StepNum>
+                        <Alerted>false</Alerted>
+                        <alertCooldown>0</alertCooldown>
+                        <hasLineOfSight>false</hasLineOfSight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LineOfSight">
@@ -534,8 +543,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>32</cell-size>
-                                <cell-border>-1</cell-border>
+                                <cell-size>16</cell-size>
+                                <cell-border>0</cell-border>
                                 <obstacles>Solids</obstacles>
                                 <max-speed>300</max-speed>
                                 <acceleration>1000</acceleration>
@@ -572,6 +581,9 @@
                     </properties>
                     <instance-variables>
                         <StepNum>1</StepNum>
+                        <Alerted>false</Alerted>
+                        <alertCooldown>0</alertCooldown>
+                        <hasLineOfSight>false</hasLineOfSight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LineOfSight">
@@ -589,8 +601,8 @@
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>32</cell-size>
-                                <cell-border>-1</cell-border>
+                                <cell-size>16</cell-size>
+                                <cell-border>0</cell-border>
                                 <obstacles>Solids</obstacles>
                                 <max-speed>300</max-speed>
                                 <acceleration>1000</acceleration>
@@ -662,6 +674,28 @@
                         <depth>0</depth>
                         <hotspotX>0.46875</hotspotX>
                         <hotspotY>0.59375</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite" uid="98">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1339</x>
+                        <y>197</y>
+                        <z>0</z>
+                        <width>1</width>
+                        <height>1</height>
+                        <depth>0</depth>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -10,6 +10,7 @@
     <unique-id>1xfwt2n95kxzz</unique-id>
     <saved-with-version>26500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -169,6 +170,9 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="StepNum" sid="820696172595665" type="number" />
+                <instance-variable name="Alerted" sid="550104154814540" type="boolean" />
+                <instance-variable name="alertCooldown" sid="698081577646491" type="number" />
+                <instance-variable name="hasLineOfSight" sid="308586301407542" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="LineOfSight" sid="715829438849702">
@@ -184,9 +188,14 @@
                     <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
+            <container>
+                <type>Enemy</type>
+                <type>Sprite</type>
+            </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="FRONT" pingpong="0" repeatcount="1" repeatto="0" sid="291787992406523" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\enemy_front.png">
+                        <image-point name="Eyes" x="0.5" y="0.5" />
                         <collision-poly>
                             <point x="0.140625" y="0.078125" />
                             <point x="0.867188" y="0.0625" />
@@ -440,6 +449,21 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Audio" sid="993166478534132">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Sprite" sid="880082441861949">
+            <plugin id="Sprite" />
+            <container>
+                <type>Enemy</type>
+                <type>Sprite</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="284722629328361" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -454,9 +478,37 @@
     <global-instances>
         <global-instance type="Keyboard" uid="16" />
         <global-instance type="Mouse" uid="15" />
+        <global-instance type="Audio" uid="96">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
-    <music-folder />
+    <sounds-folder>
+        <file name="CAUGHT.m4a" />
+        <file name="CAUGHT.ogg" />
+        <file name="Dropping walls.m4a" />
+        <file name="Dropping walls.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="Level 1.m4a" />
+        <file name="Level 1.ogg" />
+        <file name="Level 3.m4a" />
+        <file name="Level 3.ogg" />
+        <file name="title screen and end screen loop.m4a" />
+        <file name="title screen and end screen loop.ogg" />
+        <file name="Goal Chime.m4a" />
+        <file name="Goal Chime.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />

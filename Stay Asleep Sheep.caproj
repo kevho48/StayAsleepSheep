@@ -21,7 +21,6 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -84,10 +83,10 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\Character_back.png">
                         <image-point name="Imagepoint 1" x="0.5" y="0" />
                         <collision-poly>
-                            <point x="0.167969" y="0.0429688" />
-                            <point x="0.777344" y="0.0351563" />
+                            <point x="0.222656" y="0.0546875" />
+                            <point x="0.773438" y="0.0507813" />
                             <point x="0.792969" y="1" />
-                            <point x="0.15625" y="1" />
+                            <point x="0.214844" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -95,10 +94,10 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\character_left.png">
                         <image-point name="Imagepoint 1" x="0" y="0.5" />
                         <collision-poly>
-                            <point x="0.0625" y="0.0976563" />
-                            <point x="0.761719" y="0.0078125" />
+                            <point x="0.21875" y="0.0507813" />
+                            <point x="0.761719" y="0.0429688" />
                             <point x="0.777344" y="1" />
-                            <point x="0.25" y="1" />
+                            <point x="0.253906" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -106,10 +105,10 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\Character_right.png">
                         <image-point name="Imagepoint 1" x="1" y="0.5" />
                         <collision-poly>
-                            <point x="0.148438" y="0.0507813" />
-                            <point x="0.898438" y="0.0859375" />
+                            <point x="0.238282" y="0.0625" />
+                            <point x="0.773438" y="0.0585938" />
                             <point x="0.742188" y="1" />
-                            <point x="0.210938" y="1" />
+                            <point x="0.246094" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -175,17 +174,11 @@
                 <instance-variable name="hasLineOfSight" sid="308586301407542" type="boolean" />
             </instance-variables>
             <behaviors>
-                <behavior-type name="LineOfSight" sid="715829438849702">
-                    <behavior id="LOS" />
-                </behavior-type>
                 <behavior-type name="Solid" sid="791346550923062">
                     <behavior id="solid" />
                 </behavior-type>
                 <behavior-type name="Pathfinding" sid="112862953413684">
                     <behavior id="Pathfinding" />
-                </behavior-type>
-                <behavior-type name="Flash" sid="583895290426997">
-                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
             <container>
@@ -197,28 +190,28 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\enemy_front.png">
                         <image-point name="Eyes" x="0.5" y="0.5" />
                         <collision-poly>
-                            <point x="0.140625" y="0.078125" />
-                            <point x="0.867188" y="0.0625" />
-                            <point x="0.878906" y="1" />
-                            <point x="0.160156" y="0.988281" />
+                            <point x="0.234375" y="0.0585938" />
+                            <point x="0.746094" y="0.0546875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.296875" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="BACK" pingpong="0" repeatcount="1" repeatto="0" sid="835835333975319" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\enemy_back.png">
                         <collision-poly>
-                            <point x="0.117188" y="0.105469" />
-                            <point x="0.882813" y="0.0820313" />
-                            <point x="0.878906" y="0.945313" />
-                            <point x="0.105469" y="0.957031" />
+                            <point x="0.242188" y="0.0820315" />
+                            <point x="0.761719" y="0.0781251" />
+                            <point x="0.683594" y="1" />
+                            <point x="0.304688" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="LEFT" pingpong="0" repeatcount="1" repeatto="0" sid="607235091792446" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\enemy_left.png">
                         <collision-poly>
-                            <point x="0.152344" y="0.1875" />
-                            <point x="0.839844" y="0.078125" />
+                            <point x="0.234375" y="0.179688" />
+                            <point x="0.78125" y="0.078125" />
                             <point x="0.722656" y="1" />
                             <point x="0.292969" y="1" />
                         </collision-poly>
@@ -329,7 +322,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="887877710321313" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\akith\Downloads\V09.7-20181204T233946Z-001\V09.7\madness portal.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -508,6 +501,8 @@
         <file name="title screen and end screen loop.ogg" />
         <file name="Goal Chime.m4a" />
         <file name="Goal Chime.ogg" />
+        <file name="Level 2.m4a" />
+        <file name="Level 2.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">

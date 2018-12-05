@@ -4,23 +4,6 @@
     <name>Event sheet 1</name>
     <events>
         <variable constant="0" name="PlayerWalls" sid="577611102819914" static="0" type="number">0</variable>
-        <event-block sid="179174060671576">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="502940956622606" type="System">
-                    <param id="0" name="First value">LayoutName</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Second value">&quot;Menu&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Play" sid="617274731509817" type="Audio">
-                    <param id="0" name="Audio file">title screen and end screen loop</param>
-                    <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="191042043355431">
             <conditions>
                 <condition id="-1" name="Every tick" sid="875510333847541" type="System" />
@@ -2987,62 +2970,101 @@
         </event-group>
         <event-group description="" sid="871253844142484" title="LOS">
             <sub-events>
-                <event-block sid="921574109789580">
+                <event-block sid="602690652066263">
                     <conditions>
-                        <condition id="-11" name="For Each" sid="855684415886968" type="System">
-                            <param id="0" name="Object">Enemy</param>
+                        <condition id="-8" name="Compare two values" sid="543381366373363" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Menu&quot;</param>
                         </condition>
-                        <condition id="-15" name="Pick nearest/furthest" sid="677161564376261" type="Sprite">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="X">Enemy.X</param>
-                            <param id="2" name="Y">Enemy.Y</param>
-                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="467656579130183" type="Sprite">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="915508664725146">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="276386470703372" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block any="1" sid="185237651847394">
+                        <event-block sid="921574109789580">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="674009577961243" type="Sprite">
-                                    <param id="0" name="Object">Level1Map</param>
+                                <condition id="-11" name="For Each" sid="855684415886968" type="System">
+                                    <param id="0" name="Object">Enemy</param>
                                 </condition>
-                                <condition id="1" name="Is overlapping another object" sid="453151396239682" type="Sprite">
-                                    <param id="0" name="Object">Level2Map</param>
-                                </condition>
-                                <condition id="1" name="Is overlapping another object" sid="776712602173829" type="Sprite">
-                                    <param id="0" name="Object">Level3Map</param>
-                                </condition>
-                                <condition id="1" name="Is overlapping another object" sid="369429829265016" type="Sprite">
-                                    <param id="0" name="Object">VerticalWall</param>
-                                </condition>
-                                <condition id="1" name="Is overlapping another object" sid="114022110831381" type="Sprite">
-                                    <param id="0" name="Object">HorizontalWall</param>
+                                <condition id="-15" name="Pick nearest/furthest" sid="677161564376261" type="Sprite">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="X">Enemy.X</param>
+                                    <param id="2" name="Y">Enemy.Y</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="308685643423213" type="Enemy">
-                                    <param id="0" name="Instance variable">hasLineOfSight</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="431305698543193">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="745193686405912" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="697570776100256" type="Enemy">
-                                    <param id="0" name="Instance variable">hasLineOfSight</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="597122494327169" type="Enemy">
-                                    <param id="0" name="Instance variable">alertCooldown</param>
-                                    <param id="1" name="Value">2</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="590550338750336" type="Enemy">
-                                    <param id="0" name="Instance variable">Alerted</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="291734381082443">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="501099232581128" type="System">
+                                            <param id="0" name="First value">Sprite.Angle</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">Enemy.Pathfinding.MovingAngle-45</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="578941852077325" type="System">
+                                            <param id="0" name="First value">Sprite.Angle</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">Enemy.Pathfinding.MovingAngle+45</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block any="1" sid="185237651847394">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="674009577961243" type="Sprite">
+                                                    <param id="0" name="Object">Level1Map</param>
+                                                </condition>
+                                                <condition id="1" name="Is overlapping another object" sid="453151396239682" type="Sprite">
+                                                    <param id="0" name="Object">Level2Map</param>
+                                                </condition>
+                                                <condition id="1" name="Is overlapping another object" sid="776712602173829" type="Sprite">
+                                                    <param id="0" name="Object">Level3Map</param>
+                                                </condition>
+                                                <condition id="1" name="Is overlapping another object" sid="369429829265016" type="Sprite">
+                                                    <param id="0" name="Object">VerticalWall</param>
+                                                </condition>
+                                                <condition id="1" name="Is overlapping another object" sid="114022110831381" type="Sprite">
+                                                    <param id="0" name="Object">HorizontalWall</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="308685643423213" type="Enemy">
+                                                    <param id="0" name="Instance variable">hasLineOfSight</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="525866550732018">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="643018348417515" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="697570776100256" type="Enemy">
+                                                    <param id="0" name="Instance variable">hasLineOfSight</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="590550338750336" type="Enemy">
+                                                    <param id="0" name="Instance variable">Alerted</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="597122494327169" type="Enemy">
+                                                    <param id="0" name="Instance variable">alertCooldown</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -3149,222 +3171,230 @@
                 <action id="0" name="Play" sid="564351384459378" type="Audio">
                     <param id="0" name="Audio file">Goal Chime</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">-15</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
         <event-group description="" sid="805970926455069" title="Animations">
             <sub-events>
-                <event-block sid="578458093408809">
+                <event-block sid="408300604221043">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="126144916844719" type="Keyboard">
-                            <param id="0" name="Key">68</param>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="734716353395377" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Menu&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="421908487078935">
+                        <event-block sid="578458093408809">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="930201678151035" type="Player">
-                                    <param id="0" name="Object">VerticalWall</param>
+                                <condition id="2" name="Key is down" sid="126144916844719" type="Keyboard">
+                                    <param id="0" name="Key">68</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="157453848682184" type="VerticalWall" />
-                                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="137620673175351" type="Enemy" />
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="421908487078935">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="930201678151035" type="Player">
+                                            <param id="0" name="Object">VerticalWall</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="157453848682184" type="VerticalWall" />
+                                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="137620673175351" type="Enemy" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="105713394773524">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="612573997764752" type="Player">
+                                            <param id="0" name="Object">HorizontalWall</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="296697440417715" type="HorizontalWall" />
+                                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="296375192270546" type="Enemy" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="105713394773524">
+                        <event-block sid="351532797270944">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="612573997764752" type="Player">
-                                    <param id="0" name="Object">HorizontalWall</param>
+                                <condition id="2" name="Key is down" sid="430379975792220" type="Keyboard">
+                                    <param id="0" name="Key">38</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="296697440417715" type="HorizontalWall" />
-                                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="296375192270546" type="Enemy" />
+                                <action id="4" name="Set animation" sid="497560808636341" type="Player">
+                                    <param id="0" name="Animation">&quot;BACK&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="199682243538699">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="841388039439401" type="Keyboard">
+                                            <param id="0" name="Key">32</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="414336882818895" type="System">
+                                            <param id="0" name="Variable">PlayerWalls</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="731689941953999" type="Player">
+                                            <param id="0" name="Object">HorizontalWall</param>
+                                            <param id="1" name="Layer">2</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="522441265052726" type="System">
+                                            <param id="0" name="Variable">PlayerWalls</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="335833880353267" type="Audio">
+                                            <param id="0" name="Audio file">Dropping walls</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="567332047164617">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="105064376087431" type="Keyboard">
-                            <param id="0" name="Key">39</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="133672655659051" type="Player">
-                            <param id="0" name="Animation">&quot;RIGHT&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="395464836656325">
+                        <event-block sid="270069697469898">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="903125565616361" type="Keyboard">
-                                    <param id="0" name="Key">32</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="768381006710056" type="System">
-                                    <param id="0" name="Variable">PlayerWalls</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="2" name="Key is down" sid="343241130324668" type="Keyboard">
+                                    <param id="0" name="Key">37</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="486401009881964" type="Player">
-                                    <param id="0" name="Object">VerticalWall</param>
-                                    <param id="1" name="Layer">2</param>
-                                    <param id="2" name="Image point">1</param>
+                                <action id="4" name="Set animation" sid="453978203144686" type="Player">
+                                    <param id="0" name="Animation">&quot;LEFT&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-11" name="Subtract from" sid="519886421592691" type="System">
-                                    <param id="0" name="Variable">PlayerWalls</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Play" sid="248870412333304" type="Audio">
-                                    <param id="0" name="Audio file">Dropping walls</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="232063239561230" type="Enemy" />
                             </actions>
+                            <sub-events>
+                                <event-block sid="511401866713351">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="585923210595645" type="Keyboard">
+                                            <param id="0" name="Key">32</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="141716416342858" type="System">
+                                            <param id="0" name="Variable">PlayerWalls</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="451479570792110" type="Player">
+                                            <param id="0" name="Object">VerticalWall</param>
+                                            <param id="1" name="Layer">2</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="166272918782350" type="System">
+                                            <param id="0" name="Variable">PlayerWalls</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="566032015060577" type="Audio">
+                                            <param id="0" name="Audio file">Dropping walls</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="331584249349116">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="389686707140044" type="Keyboard">
-                            <param id="0" name="Key">40</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="950235627671330" type="Player">
-                            <param id="0" name="Animation">&quot;FRONT&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="957912851613462">
+                        <event-block sid="331584249349116">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="530153961706321" type="Keyboard">
-                                    <param id="0" name="Key">32</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="900994539284628" type="System">
-                                    <param id="0" name="Variable">PlayerWalls</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="2" name="Key is down" sid="389686707140044" type="Keyboard">
+                                    <param id="0" name="Key">40</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="697124806309693" type="Player">
-                                    <param id="0" name="Object">HorizontalWall</param>
-                                    <param id="1" name="Layer">2</param>
-                                    <param id="2" name="Image point">1</param>
+                                <action id="4" name="Set animation" sid="950235627671330" type="Player">
+                                    <param id="0" name="Animation">&quot;FRONT&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-11" name="Subtract from" sid="624359426831634" type="System">
-                                    <param id="0" name="Variable">PlayerWalls</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Play" sid="738429364526035" type="Audio">
-                                    <param id="0" name="Audio file">Dropping walls</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="655172554151851" type="Enemy" />
                             </actions>
+                            <sub-events>
+                                <event-block sid="957912851613462">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="530153961706321" type="Keyboard">
+                                            <param id="0" name="Key">32</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="900994539284628" type="System">
+                                            <param id="0" name="Variable">PlayerWalls</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="697124806309693" type="Player">
+                                            <param id="0" name="Object">HorizontalWall</param>
+                                            <param id="1" name="Layer">2</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="624359426831634" type="System">
+                                            <param id="0" name="Variable">PlayerWalls</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="738429364526035" type="Audio">
+                                            <param id="0" name="Audio file">Dropping walls</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="270069697469898">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="343241130324668" type="Keyboard">
-                            <param id="0" name="Key">37</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="453978203144686" type="Player">
-                            <param id="0" name="Animation">&quot;LEFT&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="511401866713351">
+                        <event-block sid="567332047164617">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="585923210595645" type="Keyboard">
-                                    <param id="0" name="Key">32</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="141716416342858" type="System">
-                                    <param id="0" name="Variable">PlayerWalls</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="2" name="Key is down" sid="105064376087431" type="Keyboard">
+                                    <param id="0" name="Key">39</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="451479570792110" type="Player">
-                                    <param id="0" name="Object">VerticalWall</param>
-                                    <param id="1" name="Layer">2</param>
-                                    <param id="2" name="Image point">1</param>
+                                <action id="4" name="Set animation" sid="133672655659051" type="Player">
+                                    <param id="0" name="Animation">&quot;RIGHT&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-11" name="Subtract from" sid="166272918782350" type="System">
-                                    <param id="0" name="Variable">PlayerWalls</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Play" sid="566032015060577" type="Audio">
-                                    <param id="0" name="Audio file">Dropping walls</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="324477818336292" type="Enemy" />
                             </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="351532797270944">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="430379975792220" type="Keyboard">
-                            <param id="0" name="Key">38</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="497560808636341" type="Player">
-                            <param id="0" name="Animation">&quot;BACK&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="199682243538699">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="841388039439401" type="Keyboard">
-                                    <param id="0" name="Key">32</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="414336882818895" type="System">
-                                    <param id="0" name="Variable">PlayerWalls</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="731689941953999" type="Player">
-                                    <param id="0" name="Object">HorizontalWall</param>
-                                    <param id="1" name="Layer">2</param>
-                                    <param id="2" name="Image point">1</param>
-                                </action>
-                                <action id="-11" name="Subtract from" sid="522441265052726" type="System">
-                                    <param id="0" name="Variable">PlayerWalls</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Play" sid="335833880353267" type="Audio">
-                                    <param id="0" name="Audio file">Dropping walls</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="472603316689700" type="Enemy" />
-                            </actions>
+                            <sub-events>
+                                <event-block sid="395464836656325">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="903125565616361" type="Keyboard">
+                                            <param id="0" name="Key">32</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="768381006710056" type="System">
+                                            <param id="0" name="Variable">PlayerWalls</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="486401009881964" type="Player">
+                                            <param id="0" name="Object">VerticalWall</param>
+                                            <param id="1" name="Layer">2</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="519886421592691" type="System">
+                                            <param id="0" name="Variable">PlayerWalls</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="248870412333304" type="Audio">
+                                            <param id="0" name="Audio file">Dropping walls</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -3466,5 +3496,27 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="184402470941362">
+            <conditions>
+                <condition id="2" name="Key is down" sid="799891053540303" type="Keyboard">
+                    <param id="0" name="Key">65</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="929824850238717" type="ShadowLight">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="421340624458436">
+            <conditions>
+                <condition id="-22" name="Else" sid="100946788246966" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="707456258184626" type="ShadowLight">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

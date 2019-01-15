@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="Music" sid="908532656292559" static="0" type="text">on</variable>
         <variable constant="0" name="PlayerWalls" sid="577611102819914" static="0" type="number">0</variable>
         <event-block sid="191042043355431">
             <conditions>
@@ -76,6 +77,7 @@
                             <param id="0" name="Obstacle">VerticalWall</param>
                         </action>
                         <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="968182388575095" type="Enemy" />
+                        <action id="33" name="Stop all" sid="613617913274876" type="Audio" />
                     </actions>
                     <sub-events>
                         <event-group description="" sid="800652623298573" title="level1Enemies">
@@ -3143,7 +3145,7 @@
                 <action id="0" name="Play" sid="299644845516261" type="Audio">
                     <param id="0" name="Audio file">CAUGHT</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">5</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
@@ -3168,10 +3170,13 @@
                 <action id="-43" name="Go to next/previous layout" sid="575841129713012" type="System">
                     <param id="0" name="Which">0</param>
                 </action>
+                <action id="6" name="Stop" sid="256248027810575" type="Audio">
+                    <param id="0" name="Tag">&quot;music&quot;</param>
+                </action>
                 <action id="0" name="Play" sid="564351384459378" type="Audio">
                     <param id="0" name="Audio file">Goal Chime</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">-15</param>
+                    <param id="3" name="Volume">-10</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
@@ -3389,7 +3394,7 @@
                                         <action id="0" name="Play" sid="248870412333304" type="Audio">
                                             <param id="0" name="Audio file">Dropping walls</param>
                                             <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">0</param>
+                                            <param id="3" name="Volume">5</param>
                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                     </actions>
@@ -3496,27 +3501,42 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="184402470941362">
+        <event-block sid="992633942801798">
             <conditions>
-                <condition id="2" name="Key is down" sid="799891053540303" type="Keyboard">
-                    <param id="0" name="Key">65</param>
-                </condition>
+                <condition id="-2" name="On start of layout" sid="635740385637298" type="System" />
             </conditions>
             <actions>
-                <action id="-16" name="Set opacity" sid="929824850238717" type="ShadowLight">
-                    <param id="0" name="Opacity">0</param>
+                <action id="0" name="Play" sid="905197793570137" type="Audio">
+                    <param id="0" name="Audio file">Level 1</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="421340624458436">
+        <event-block sid="823775209136580">
             <conditions>
-                <condition id="-22" name="Else" sid="100946788246966" type="System" />
+                <condition id="-8" name="Compare two values" sid="185169364091915" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;Ending Screen&quot;</param>
+                </condition>
             </conditions>
-            <actions>
-                <action id="-16" name="Set opacity" sid="707456258184626" type="ShadowLight">
-                    <param id="0" name="Opacity">100</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="603378205879383">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="364853501584491" type="Keyboard">
+                            <param id="0" name="Key">82</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="738534877222250" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

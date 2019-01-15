@@ -14,7 +14,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="1">Level1</layout>
         <layout order="2">Level 2</layout>
         <layout order="3">Level 3</layout>
-        <event-sheet active="1" order="4">Event sheet 1</event-sheet>
+        <layout active="1" order="4">Ending Screen</layout>
+        <event-sheet order="5">Event sheet 1</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -44,5 +45,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/EnemyPath5/" />
         <folder expanded="1" path="animation-folder/EnemyPath6/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
     </folders-expanded>
 </c2uistate>
